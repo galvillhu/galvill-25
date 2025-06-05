@@ -1,0 +1,32 @@
+/* Hamburger menu animation */
+#hamburger-button.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+#hamburger-button.open span:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#hamburger-button.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+#hamburger-button span {
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+/* Mobile menu transition */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    display: none;
+}
+
+#mobile-menu.menu-open {
+    max-height: 200px; /* Adjust based on your menu height */
+    display: block;
+}
